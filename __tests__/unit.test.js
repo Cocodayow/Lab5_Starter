@@ -19,8 +19,8 @@ test('should return true since valid phone number with area code in parentheses'
   expect(isPhoneNumber('(123)-456-7890')).toBe(true);
 });
 //isPhonenumber false test cases
-test('should return false since area code not in parenthesis', () => {
-  expect(isPhoneNumber('123 456-7890')).toBe(false);
+test('should return false since no number given', () => {
+  expect(isPhoneNumber('')).toBe(false);
 });
 test('should return false since number of digits are in correct', () => {
   expect(isPhoneNumber('(123) 456-70')).toBe(false);
